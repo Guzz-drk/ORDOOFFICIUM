@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: absolute;
+    right: 0;
+}
+
+/* home.html CSS */
+
+.cab {
+    background-color: #212323;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header-1 {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+.logo {
+    display: inline-block;
+    padding-left: 20%;
+}
+
+.conf {
+    padding-right: 20%;
+    float: right;
+    margin-top: 12px;
+}
+
+.conf a img {
+    padding: 5px;
+}
+
+.conf a img:hover {
+    background-color: #c50000b2;
+    transition: 800ms;
+    border-radius: 15px;
+}
+
+.conf .desc {
+    display:none;
+    position:relative
+}
+
+.conf a:hover .desc#hom {
+    display:block;
+    position:absolute;
+    top:65px;
+    width: 45px;
+    margin-left: -5px;
+    text-align: center;
+    background-color: #f700009c;
+    color: white;
+    padding: 10px 10px;
+    pointer-events: none;
+}
+
+.conf a:hover .desc#log {
+    display:block;
+    position:absolute;
+    top:65px;
+    width: 45px;
+    margin-left: 55px;
+    text-align: center;
+    background-color: #f700009c;
+    color: white;
+    padding: 10px 10px;
+}
+
+.header-2 {
+    background-color: rgb(184, 184, 184);
+    margin: 0 auto;
+    width: 100%;
+    height: 60px;
+}
+
+.menu {
+    width: 100vw;
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+    list-style: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-size: large;
+    color: white;
+    padding: 20px 40px;
+    display: block;
+}
+
+.menu li:hover {
+    background-color: #f70000b2;
+    border-bottom: 4px solid #580404b2;
+    transition: 600ms;
+    cursor: pointer;
+}
+
+.menu .drop {
+    position: absolute;
+    background-color: #f70000b2;
+    color: white;
+    backdrop-filter: blur(3px);
+    display: none;
+}
+
+.menu .drop li {
+    display: block;
+}
+
+.menu .drop a {
+    text-decoration: none;
+    font-size: large;
+    color: white;
+    width: 264px;
+    padding: 20px 0;
+    margin: auto;
+    display: block;
+}
+
+.menu .drop li:hover {
+    border-left: 8px solid #580404b2;
+    border-bottom: 0px;
+    background-color: #f70000b2;
+    transition: 500ms;
+}
+
+.menu li:hover .drop {
+    display: block;
+    margin-top: 4px;
+}
+
+
+/* login.html CSS */
+
+.log_sec1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: center;
+    width: 100%;
+    background-color: aqua;
+}
+
+.log_sec1 fieldset {
+    background-color: #212323;
+    width: 580px;
+    height: auto;
+    min-height: 70vh;
+    padding: 15px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: #212323b0 5px 5px 10px;
+}
+

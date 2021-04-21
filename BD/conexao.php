@@ -1,14 +1,14 @@
 <?php 
-try{
-$conexao = new PDO("pgsql:dbname=ORDOOFFICIUM
-host=localhost"
-,"postgres"
-,"masterkey");
-echo("sucessuful!");
-}catch(PDOException $e) {
-  echo $e->getMessage();
+class conexao extends PDO 
+{
+  private $connection;
 
+  public function __construct(){
+
+    $this ->connection = new PDO("pgsql:dbname=ORDOOFFICIUM
+    host=localhost"
+    ,"postgres"
+    ,"masterkey");
+  }
 }
-
-
 ?>

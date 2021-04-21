@@ -19,7 +19,7 @@ if((!empty($_POST['txtNome'])) && (!empty($_POST['txtCpf'])) &&
     }
 
     if(count($erros) == 0){
-        $user = new Usuario();
+        $user = new Usuario($arg, $arg2, $arg3, $arg4, $arg5, $arg6, $arg7, $arg8, $arg9, $arg10, $arg11, $arg12, $arg13);
 
         $user->nome = $_POST['txtNome'];
         $user->cpf = $_POST['txtCpf'];
@@ -30,7 +30,7 @@ if((!empty($_POST['txtNome'])) && (!empty($_POST['txtCpf'])) &&
         $user->cidade = $_POST['txtCidade'];
         $user->senha = $_POST['txtSenha'];
         $user->controleAcesso = $_POST['txtControleacesso'];
-        echo "Usuário $user->nome $user->email Criado com sucesso!";
+        echo "Usuário $user->nome Criado com sucesso!";
     } 
     else{
         echo "Ocorreram erros ao cadastrar novo Usuário.";

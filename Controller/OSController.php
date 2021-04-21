@@ -7,7 +7,7 @@ if((!empty($_POST['txtCliente'])) && (!empty($_POST['txtMarcaequip'])) &&
     $erros = array();
 
     if(count($erros) == 0){
-        $os = new OrdemServico($arg1, $arg2, $arg3, $arg4, $arg5, $arg6, $arg7);
+        $os = new OrdemServico();
 
         $os->cliente = $_POST['txtCliente'];
         $os->marcaEquipamento = $_POST['txtMarcaequip'];

@@ -17,22 +17,8 @@ class Usuario
     var $controleAcesso;
 
 
-    public function __construct($id,$nome,$cpf,$rg,$telefone,$dataNascimento,$email,$rua,$bairro,$numero,$cidade,$senha,$controleAcesso)
+    public function __construct()
     {
-        $this->id = $id;
-        $this->nome = $nome;
-        $this->cpf = $cpf;
-        $this->rg = $rg;
-        $this->telefone = $telefone;
-        $this->dataNascimento = $dataNascimento;
-        $this->email = $email;
-        $this->rua = $rua;
-        $this->bairro = $bairro;
-        $this->numero = $numero;
-        $this->cidade = $cidade;
-        $this->senha = $senha;
-        $this->controleAcesso = $controleAcesso;
-        
 
     }
     public function __set($nome, $valor)

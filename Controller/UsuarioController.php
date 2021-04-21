@@ -19,7 +19,7 @@ if((!empty($_POST['txtNome'])) && (!empty($_POST['txtCpf'])) &&
     }
 
     if(count($erros) == 0){
-        $user = new Usuario($arg, $arg2, $arg3, $arg4, $arg5, $arg6, $arg7, $arg8, $arg9, $arg10, $arg11, $arg12, $arg13);
+        $user = new Usuario();
 
         $user->nome = $_POST['txtNome'];
         $user->cpf = $_POST['txtCpf'];

@@ -12,15 +12,9 @@ class OrdemServico
     var $viciopercebido;
 
 //funções "magicas"
-    public function __construct($id,$cliente,$marca,$modelo,$cor,$tipo,$vicio)
+    public function __construct()
     {
-        $this->id=$id;
-        $this->cliente=$cliente;
-        $this->marcaEquipamento=$marca;
-        $this->modeloEquipamento=$modelo;
-        $this->corEquipamento=$cor;
-        $this->tipoEquipamento=$tipo;
-        $this->viciopercebido=$vicio;
+      
 
     }
     public function __set($nome, $valor)

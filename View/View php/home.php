@@ -20,7 +20,7 @@
                 <ul class="menu">
                     <li><a class="opc">Ordens de Serviço</a>
                         <ul class="drop">
-                            <li><a href="">Criar</a></li>
+                            <li><a href="FormOs.php">Criar</a></li>
                             <li><a href="">Listar</a></li>
                         </ul>
                     </li>

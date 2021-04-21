@@ -1,6 +1,6 @@
 <?php
 include '../Model/OSModel.php';
-if((!empty($_POST['txtCliente'])) && (!empty($_POST['txtMarcaequip'])) &&
+if((!empty($_POST['id'])) &&(!empty($_POST['txtCliente'])) && (!empty($_POST['txtMarcaequip'])) &&
 (!empty($_POST['txtModeloequip'])) && (!empty($_POST['txtCorequip'])) &&
 (!empty($_POST['txtTipoequip'])) && (!empty($_POST['txtVicioperceb'])))
 {
@@ -9,6 +9,7 @@ if((!empty($_POST['txtCliente'])) && (!empty($_POST['txtMarcaequip'])) &&
     if(count($erros) == 0){
         $os = new OrdemServico();
 
+        $os->id = $_POST['id'];
         $os->cliente = $_POST['txtCliente'];
         $os->marcaEquipamento = $_POST['txtMarcaequip'];
         $os->modeloEquipamento = $_POST['txtModeloequip'];

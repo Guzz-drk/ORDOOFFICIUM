@@ -3,50 +3,75 @@
     <head>
         <meta charset="UTF-8">
         <title>Login</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
     </head>
+
     <body>
-        <header class="cab">
-            <div class="header-1">
+        <header>
+            <div class="jumbotron jumbotron-fluid cab_1">
                 <div class="logo">
                     <img src="img/logo.png" width="150px">
                 </div>
-                <div class="conf">
-                    <a href="home.html"><img src="img/home_img.png" width="35px"><span class="desc" id="hom">Home</span></a>
-                    
+                <div class="login_e_home">
+                    <a href="home.html"><img src="img/home_img.png" width="50px"><span class="descricao" id="hom">Home</span></a>
                 </div>
             </div>
-            <div class="header-2">
-                <ul class="menu">
-                    <li><a class="opc">Ordens de Serviço</a>
-                        <ul class="drop">
-                            <li><a href="">Criar</a></li>
-                            <li><a href="">Listar</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="opc">Usuários</a>
-                        <ul class="drop">
-                            <li><a href="">Cadastrar</a></li>
-                            <li><a href="">Listar</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
         </header>
-        <section class="log_sec1">
-            <fieldset>
-                <h1>Cadastro de usuário</h1>
-                <br>
-                <label for="txtNome">Nome: </label><input type="text" name="txtNome" id="txtNome"><br><hr>
-                <label for="txtCpf">CPF: </label><input type="text" name="txtCpf" id="txtCpf"><br><hr>
-                <label for="txtRg">RG: </label><input type="text" name="txtRg" id="txtRg"><br><hr>
-                <label for="txtTelefone">Telefone: </label><input type="text" name="txtTelefone" id="txtTelefone"><br><hr>
-                <label for="txtDatanasc">Datanasc: </label><input type="text" name="txtDatanasc" id="txtDatanasc"><br><hr>
-                <label for="txtEmail">Email: </label><input type="text" name="txtEmail" id="txtEmail"><br><hr>
-                <label for="txtCidade">Cidade: </label><input type="text" name="txtCidade" id="txtCidade"><br><hr>
-                <label for="txtSenha">Senha: </label><input type="text" name="txtSenha" id="txtSenha"><br><hr>
-                <label for="txtControleacesso">Controle de Acesso: </label><input type="text" name="txtControleacesso" id="txtControleacesso">
-            </fieldset>
-        </section>
+
+        <div>
+            <h2>Login</h2>
+            <hr id="log_hr1"><hr id="log_hr2">
+        </div>
+        
+        <form class="formulario">
+            <div class="form-group col-md-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="usuario_gr">Usuário</span>
+                    </div>
+                    <input type="text" class="form-control" name="txtNome" id="txtNome" required>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="cpf_gr">CPF</span>
+                    </div>
+                    <input type="text" class="form-control" name="txtCpf" id="txtCpf" required>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="email_gr">Email</span>
+                    </div>
+                    <input type="email" class="form-control" name="txtEmail" id="txtEmail" required>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="senha_gr">Senha</span>
+                    </div>
+                    <input type="text" class="form-control" name="txtSenha" id="txtSenha" required>
+                </div>
+            </div>
+            <hr id="log_hr3"><hr id="log_hr4">
+            <button type="submit" class="btn btn-outline-primary">Entrar</button>
+        </form>
+        
     </body>
 </html>
+<!--
+    <label for="txtNome">Nome: <input type="text" name="txtNome" id="txtNome"><br></label>
+    <label for="txtCpf">CPF: <input type="text" name="txtCpf" id="txtCpf"><br></label>
+    <label for="txtRg">RG: <input type="text" name="txtRg" id="txtRg"><br></label>
+    <label for="txtTelefone">Telefone: <input type="text" name="txtTelefone" id="txtTelefone"><br></label>
+    <label for="txtDatanasc">Datanasc: <input type="text" name="txtDatanasc" id="txtDatanasc"><br></label>
+    <label for="txtEmail">Email: <input type="text" name="txtEmail" id="txtEmail"><br></label>
+    <label for="txtCidade">Cidade: <input type="text" name="txtCidade" id="txtCidade"><br></label>
+    <label for="txtSenha">Senha: <input type="text" name="txtSenha" id="txtSenha"><br></label>
+    <label for="txtControleacesso">Controle de Acesso: <input type="text" name="txtControleacesso" id="txtControleacesso"></label>
+-->

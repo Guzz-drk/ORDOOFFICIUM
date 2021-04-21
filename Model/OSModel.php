@@ -1,4 +1,5 @@
 <?php
+include_once('../BD/conexao.php');
 //classe
 class OrdemServico
 {
@@ -11,36 +12,40 @@ class OrdemServico
     var $tipoEquipamento;
     var $viciopercebido;
 
+    private $banco;
+
 //funções "magicas"
     public function __construct()
     {
-      
+      $this->banco = conexao::Conectar();
 
+    }
+    public function __get($prop) {
+        return $this->$prop;
     }
     public function __set($nome, $valor)
     {
         $this->$nome = $valor;
     }
-    public function __get($nome)
-    {
-        return $this->$nome;
-    }
+   
+
+
     public function salvar(){
-        $stmt = $this->conexao->prepare("INSERT INTO OrdemServico(id,cliente,marca,modelo,cor,tipo,vicio) VALUES(?,?,?,?,?,?,?)");
+        $stmt = $this->banco->prepare("INSERT INTO OrdemServico(id,cliente,marca,modelo,cor,tipo,vicio) VALUES(?,?,?,?,?,?,?)");
         $stmt->bindParam(1,$this->id);
-        $stmt->bindParam(3,$this->cliente);
-        $stmt->bindParam(4,$this->marcaEquipamento);
-        $stmt->bindParam(5,$this->modeloEquipamento);
-        $stmt->bindParam(6,$this->corEquipamento);
-        $stmt->bindParam(7,$this->tipoEquipamento);
-        $stmt->bindParam(8,$this->viciopercebido);
+        $stmt->bindParam(2,$this->cliente);
+        $stmt->bindParam(3,$this->marcaEquipamento);
+        $stmt->bindParam(4,$this->modeloEquipamento);
+        $stmt->bindParam(5,$this->corEquipamento);
+        $stmt->bindParam(6,$this->tipoEquipamento);
+        $stmt->bindParam(7,$this->viciopercebido);
 
         $stmt->execute();
     }
     
     public function listartodos(){
 
-        $rs = $this->conexao->query("SELECT * FROM pessoa");
+        $rs = $this->banco->query("SELECT * FROM ordemservico");
 
         $osm = null;
         $i =0;
@@ -50,16 +55,16 @@ class OrdemServico
 
             $os->id = $row->id;
             $os->cliente = $row->cliente;
-            $os->marca = $row->marcaEquipamento;
-            $os->modelo = $row->modeloEquipamento;
-            $os->cor = $row->corEquipamento;
-            $os->tipo = $row->tipoEquipamento;
-            $os->vicio = $row->viciopercebido;
+            $os->marca = $row->marca;
+            $os->modelo = $row->modelo;
+            $os->cor = $row->cor;
+            $os->tipo = $row->tipo;
+            $os->vicio = $row->vicio;
 
-            $os->conexao = null;
+            $os->banco = null;
             $osm[$i] = $os;
             $i++;
         }
-        return $os;
+        return $osm;
     }
 }

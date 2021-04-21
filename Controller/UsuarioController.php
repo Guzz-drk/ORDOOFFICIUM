@@ -1,7 +1,7 @@
 <?php
 include '../Model/UsuarioModel.php';
 include '../Include/UsuarioValidate.php';
-var_dump($_POST);
+
 if((!empty($_POST['id'])) && (!empty($_POST['txtNome'])) && (!empty($_POST['txtCpf'])) &&
 (!empty($_POST['txtRg'])) && (!empty($_POST['txtTelefone'])) &&
 (!empty($_POST['txtDatanasc'])) && (!empty($_POST['txtEmail'])) &&(!empty($_POST['txtRua'])) &&
@@ -34,7 +34,18 @@ if((!empty($_POST['id'])) && (!empty($_POST['txtNome'])) && (!empty($_POST['txtC
         $user->cidade = $_POST['txtCidade'];
         $user->senha = $_POST['txtSenha'];
         $user->controleAcesso = $_POST['txtControleacesso'];
-        echo "Usuário $user->nome Criado com sucesso!";
+        $user->Inserir();
+        $usuarios = $user->listartodos();
+        foreach($usuarios as $e){
+            echo '-----------------------------------------------------------------------------------<br>';
+            echo ($e->id).'<br>';
+            echo ($e->nome).'<br>';
+            echo ($e->cpf).'<br>';
+            echo ($e->rg).'<br>';
+            echo ($e->telefone).'<br>';
+            echo ($e->email).'<br>';
+            echo ($e->cidade).'<br>';
+        }
     } 
     else{
         echo "Ocorreram erros ao cadastrar novo Usuário.";

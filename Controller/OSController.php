@@ -16,8 +16,18 @@ if((!empty($_POST['id'])) &&(!empty($_POST['txtCliente'])) && (!empty($_POST['tx
         $os->corEquipamento = $_POST['txtCorequip'];
         $os->tipoEquipamento = $_POST['txtTipoequip'];
         $os->viciopercebido = $_POST['txtVicioperceb'];
-        echo "Ordem de Servico para $os->cliente criada com sucesso!";
         $os->salvar();
+        $ordens = $os->listartodos();
+        foreach($ordens as $e){
+            echo '-----------------------------------------------------------------------------------<br>';
+            echo ($e->id).'<br>';
+            echo ($e->cliente).'<br>';
+            echo ($e->marca).'<br>';
+            echo ($e->modelo).'<br>';
+            echo ($e->cor).'<br>';
+            echo ($e->tipo).'<br>';
+            echo ($e->vicio).'<br>';
+        }
     }
     else{
         echo "Ocorreram erros ao cadastrar a Ordem de Serviço.";

@@ -1,14 +1,25 @@
 <?php 
-class conexao extends PDO 
-{
-  private $connection;
+class Conexao{
 
-  public function __construct(){
+  public static $con;
 
-    $this ->connection = new PDO("pgsql:dbname=ORDOOFFICIUM
-    host=localhost"
-    ,"postgres"
-    ,"masterkey");
+  public static function Conectar(){
+    $host = 'localhost';
+                $user = 'postgres';
+                $pass = 'masterkey';
+                $db = 'ORDOOFFICIUM';
+
+                try{
+                    $con = new PDO("pgsql:host=$host;dbname=$db", $user, $pass);
+                }
+                catch(PDOException $e){
+                    echo $e->getMessage();
+                }
+            
+
+            return $con;
+    
   }
+  
 }
 ?>

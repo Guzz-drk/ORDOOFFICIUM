@@ -25,15 +25,7 @@
             <hr id="log_hr1"><hr id="log_hr2">
         </div>
         
-        <form class="formulario">
-            <div class="form-group col-md-6">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="usuario_gr">Usuário</span>
-                    </div>
-                    <input type="text" class="form-control" name="txtNome" id="txtNome" required>
-                </div>
-            </div>
+        <form class="form_login" action="" method="POST">
             <div class="form-group col-md-6">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
@@ -55,23 +47,21 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="senha_gr">Senha</span>
                     </div>
-                    <input type="text" class="form-control" name="txtSenha" id="txtSenha" required>
+                    <input type="password" class="form-control" name="txtSenha" id="txtSenha" required>
                 </div>
             </div>
             <hr id="log_hr3"><hr id="log_hr4">
-            <button type="submit" class="btn btn-outline-primary">Entrar</button>
+            <button type="submit" class="btn btn-outline-primary" id="logar">Entrar</button>
         </form>
-        
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/jquery.mask.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#txtCpf").mask("000.000.000-00")
+            })
+        </script>
     </body>
 </html>
-<!--
-    <label for="txtNome">Nome: <input type="text" name="txtNome" id="txtNome"><br></label>
-    <label for="txtCpf">CPF: <input type="text" name="txtCpf" id="txtCpf"><br></label>
-    <label for="txtRg">RG: <input type="text" name="txtRg" id="txtRg"><br></label>
-    <label for="txtTelefone">Telefone: <input type="text" name="txtTelefone" id="txtTelefone"><br></label>
-    <label for="txtDatanasc">Datanasc: <input type="text" name="txtDatanasc" id="txtDatanasc"><br></label>
-    <label for="txtEmail">Email: <input type="text" name="txtEmail" id="txtEmail"><br></label>
-    <label for="txtCidade">Cidade: <input type="text" name="txtCidade" id="txtCidade"><br></label>
-    <label for="txtSenha">Senha: <input type="text" name="txtSenha" id="txtSenha"><br></label>
-    <label for="txtControleacesso">Controle de Acesso: <input type="text" name="txtControleacesso" id="txtControleacesso"></label>
--->

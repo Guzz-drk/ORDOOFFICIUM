@@ -35,7 +35,8 @@ if((!empty($_POST['id'])) && (!empty($_POST['txtNome'])) && (!empty($_POST['txtC
         $user->senha = $_POST['txtSenha'];
         $user->controleAcesso = $_POST['txtControleacesso'];
         $user->Inserir();
-        $usuarios = $user->listartodos();
+        header('Location:../view/view php/ListaUsuario.php');
+       /* $usuarios = $user->listartodos();
         foreach($usuarios as $e){
             echo '-----------------------------------------------------------------------------------<br>';
             echo ($e->id).'<br>';
@@ -45,7 +46,7 @@ if((!empty($_POST['id'])) && (!empty($_POST['txtNome'])) && (!empty($_POST['txtC
             echo ($e->telefone).'<br>';
             echo ($e->email).'<br>';
             echo ($e->cidade).'<br>';
-        }
+        }*/
     } 
     else{
         echo "Ocorreram erros ao cadastrar novo Usuário.";

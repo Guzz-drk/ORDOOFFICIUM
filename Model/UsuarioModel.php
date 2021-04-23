@@ -1,5 +1,5 @@
 <?php
-include_once('../BD/conexao.php');
+include_once ('../BD/conexao.php');
 class Usuario
 {
     var $id;

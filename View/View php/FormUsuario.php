@@ -43,6 +43,10 @@
 
         <form class="form_os" action="../../Controller/UsuarioController.php" method="POST">
             <div class="form-row">
+            <div class="form-group col-md-5">
+                    <label for="">id</label>
+                    <input type="text" class="form-control" name="id" id="id" placeholder="Ex: 1" required>
+                </div>
                 <div class="form-group col-md-5">
                     <label for="">Nome</label>
                     <input type="text" class="form-control" name="txtNome" id="txtNome" placeholder="Ex: Tristan Monteiro" required>
@@ -65,6 +69,18 @@
                     <label for="">Telefone</label>
                     <input type="text" class="form-control" name="txtTelefone" id="txtTelefone" placeholder="(xx) x xxxx-xxxx" required>
                 </div>
+                <div class="form-group col-md-4">
+                  <label for="">Bairro</label>
+                  <input type="text" class="form-control" name="txtBairro" id="txtBairro" required>
+              </div>
+              <div class="form-group col-md-4">
+                  <label for="">Rua</label>
+                  <input type="text" class="form-control" name="txtRua" id="txtRua" required>
+              </div>
+              <div class="form-group col-md-4">
+                  <label for="">Numero</label>
+                  <input type="text" class="form-control" name="txtNumero" id="txtNumero" required>
+              </div>
                 <div class="form-group col-md-4">
                   <label for="">Cidade</label>
                   <input type="text" class="form-control" name="txtCidade" id="txtCidade" required>
@@ -89,7 +105,7 @@
             <hr id="log_hr3"><hr id="log_hr4">
             <button type="submit" class="btn btn-outline-primary" id="cadastrar">Cadastrar</button>
             <button type="reset" class="btn btn-outline-primary" id="limpar">Limpar</button>
-        </form>
+        </form> <br>
         <form action="home.php"><button type="submit" class="btn btn-outline-primary" id="cancelar">Cancelar</button></form>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

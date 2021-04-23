@@ -46,30 +46,30 @@
               <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Nome</th>
-                <th scope="col">CPF</th>
-                <th scope="col">RG</th>
+                <th scope="col">Email</th>
+                <th scope="col">Cidade</th>
+                <th scope="col">Excluir</th>
+                <th scope="col">Alterar</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Gaspar Duarte</td>
-                <td>020.345.344-53</td>
-                <td>9445344543</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Rafael Alves</td>
-                <td>005.455.759-32</td>
-                <td>9443663234</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Morgana Valverde</td>
-                <td>195.788.128-45</td>
-                <td>1234567890</td>
-              </tr>
+            <?php 
+            include '../../Model/UsuarioModel.php';
+            require '../../BD/conexao.php';
+            $user= new Usuario();
+            $usuario = $user->listartodos();
+            foreach($usuario as $e){
+            echo '<tr>';
+            echo '<th>'.($e->id).'</th>';
+            echo '<th>'.($e->nome).'</th>';
+            echo '<th>'.($e->email).'</th>';
+            echo '<th>'.($e->cidade).'</th>';
+            echo '<th> <button>&#9745</button> </th>';
+            echo '<th> <button>&#9999</button> </th>';
+            echo '</tr>';}?>
             </tbody>
           </table>
+        
+       
     </body>
 </html>

@@ -1,6 +1,8 @@
 <?php
 include '../Model/UsuarioModel.php';
 include '../Include/UsuarioValidate.php';
+include_once '../BD/conexao.php';
+
 
 if((!empty($_POST['id'])) && (!empty($_POST['txtNome'])) && (!empty($_POST['txtCpf'])) &&
 (!empty($_POST['txtRg'])) && (!empty($_POST['txtTelefone'])) &&
@@ -35,9 +37,10 @@ if((!empty($_POST['id'])) && (!empty($_POST['txtNome'])) && (!empty($_POST['txtC
         $user->senha = $_POST['txtSenha'];
         $user->controleAcesso = $_POST['txtControleacesso'];
         $user->Inserir();
+        
         header('Location:../view/view php/ListaUsuario.php');
-       /* $usuarios = $user->listartodos();
-        foreach($usuarios as $e){
+        
+        /*foreach($usuarios as $e){
             echo '-----------------------------------------------------------------------------------<br>';
             echo ($e->id).'<br>';
             echo ($e->nome).'<br>';

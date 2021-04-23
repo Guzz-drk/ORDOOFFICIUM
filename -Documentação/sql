@@ -1,0 +1,26 @@
+SQL para a criação do banco:
+
+CREATE TABLE usuario (
+    id integer NOT NULL,
+    nome character varying(50),
+    cpf character varying(20),
+    rg character varying(20),
+    telefone character varying(40),
+    datanacimento date,
+    email character varying(50),
+    rua character varying(50),
+    bairro character varying(50),
+    numero integer,
+    cidade character varying(50),
+    senha character varying(40),
+    controleacesso boolean
+);
+CREATE TABLE ordemservico (
+    id integer NOT NULL,
+    cliente integer,
+    marca character varying(40),
+    modelo character varying(60),
+    cor character varying(20),
+    tipo character varying(30),
+    vicio character varying(500)
+);

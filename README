@@ -1,4 +1,5 @@
 Projeto Criado a partir dos alunos Cleiton, Gustavo e Wesley, de Eng. Soft. 2
+Video explicativo: https://www.youtube.com/watch?v=oAv-pdEILoY
 Para Testes do software a máquina deverá ter PHP versão 6 ou mais, html5 e suas funcionaliades, e acesso ao PostgreSQL, para estabelecer conexão com o SGBD no arquivo conexao.php
 as variáveis $host,$user,$pass e $db, devem ser alteradas conforme seu Banco.
 
@@ -6,30 +7,3 @@ $host é a localidade onde se encontra seu Database, podendo ser desde localhost
 $user se refere ao Usuário do Banco, nosso caso é Postgres.
 $pass se refere a senha criada para o Banco, por default deixamos "masterkey".
 $db se refere ao nome da DATABASE que deve ser inseridos os dados.
-
-SQL para a criação do banco:
-
-CREATE TABLE usuario (
-    id integer NOT NULL,
-    nome character varying(50),
-    cpf character varying(20),
-    rg character varying(20),
-    telefone character varying(40),
-    datanacimento date,
-    email character varying(50),
-    rua character varying(50),
-    bairro character varying(50),
-    numero integer,
-    cidade character varying(50),
-    senha character varying(40),
-    controleacesso boolean
-);
-CREATE TABLE ordemservico (
-    id integer NOT NULL,
-    cliente integer,
-    marca character varying(40),
-    modelo character varying(60),
-    cor character varying(20),
-    tipo character varying(30),
-    vicio character varying(500)
-);

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="pt">
     <head>
         <meta charset="UTF-8">
@@ -44,6 +43,10 @@
 
         <form class="form_os" action="" method="POST">
             <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="">Id</label>
+                    <input type="text" class="form-control" name="id" id="id">
+                </div>
                 <div class="form-group col-md-5">
                     <label for="">Nome</label>
                     <input type="text" class="form-control" name="txtNome" id="txtNome" placeholder="Ex: Tristan Monteiro" required>
@@ -52,12 +55,13 @@
                     <label for="">CPF</label>
                     <input type="text" class="form-control" name="txtCpf" id="txtCpf" placeholder="xxx.xxx.xxx-xx" required>
                 </div>
+                
+            </div>
+            <div class="form-row">
                 <div class="form-group col-md-3">
                     <label for="">RG</label>
                     <input type="text" class="form-control" name="txtRg" id="txtRg" placeholder="xxxxxxxxxx" required>
                 </div>
-            </div>
-            <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="">Data de nascimento</label>
                     <input type="date" class="form-control" name="txtDatanasc" id="txtDatanasc" required>
@@ -66,10 +70,24 @@
                     <label for="">Telefone</label>
                     <input type="text" class="form-control" name="txtTelefone" id="txtTelefone" placeholder="(xx) x xxxx-xxxx" required>
                 </div>
-                <div class="form-group col-md-4">
-                  <label for="">Cidade</label>
-                  <input type="text" class="form-control" name="txtCidade" id="txtCidade" required>
-              </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label for="">Cidade</label>
+                    <input type="text" class="form-control" name="txtCidade" id="txtCidade" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Rua</label>
+                    <input type="text" class="form-control" name="txtRua" id="txtRua" required>
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="">Bairro</label>
+                    <input type="text" class="form-control" name="txtBairro" id="txtBairro" required>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="">Número</label>
+                    <input type="text" class="form-control" name="txtNumero" id="txtNumero" required>
+                </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-7">
@@ -84,7 +102,11 @@
             <div class="form-row">
                 <div class="form-group col-md-7">
                     <label for="">Controle de Acesso</label>
-                    <input type="txt" class="form-control" name="txtControleacesso" id="txtControleacesso" required>
+                    <select name="txtControleacesso" id="txtControleacesso" class="form-control">
+                        <option selected></option>
+                        <option value="true">Administrador</option>
+                        <option value="false">Usuário</option>
+                    </select>
                 </div>
             </div>
             <hr id="log_hr3"><hr id="log_hr4">
@@ -102,58 +124,4 @@
             })
         </script>
     </body>
-=======
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Usuário</title>
-</head>
-<body>
-    <form action="../../Controller/UsuarioController.php" method="POST">
-        <Label>ID:</Label>
-            <input type="text" name="id" id="id">
-            <br><br>
-        <Label>Nome:</Label>
-            <input type="text" name="txtNome" id="txtNome">
-            <br><br>
-        <Label>CPF:</Label>
-            <input type="text" name="txtCpf" id="txtCpf">
-            <br><br>
-        <Label>RG:</Label>
-            <input type="text" name="txtRg" id="txtRg">
-            <br><br>
-        <Label>Telefone:</Label>
-            <input type="text" name="txtTelefone" id="txtTelefone">
-            <br><br>
-        <Label>Data de Nascimento:</Label>
-            <input type="date" name="txtDatanasc" id="txtDatanasc">
-            <br><br>
-        <Label>E-mail:</Label>
-            <input type="email" name="txtEmail" id="txtEmail">
-            <br><br>
-        <Label>Cidade:</Label>
-            <input type="text" name="txtCidade" id="txtCidade">
-            <br><br>
-        <Label>Rua:</Label>
-            <input type="text" name="txtRua" id="txtRua">
-            <br><br>
-        <Label>Bairro:</Label>
-            <input type="text" name="txtBairro" id="txtBairro">
-            <br><br>
-        <Label>Número:</Label>
-            <input type="text" name="txtNumero" id="txtNumero">
-            <br><br>
-        <Label>Senha:</Label>
-            <input type="password" name="txtSenha" id="txtSenha">
-            <br><br>
-        <Label>Controle de Acesso:</Label>
-            <input type="text" name="txtControleacesso" id="txtControleacesso">
-            <br><br>
-        <button type="submit">Enviar!</button> 
-        <button type="reset">Limpar!</button>
-    </form>
-</body>
->>>>>>> afe0f73b961b4029b01ff6240bd9082d62ab03dc
 </html>

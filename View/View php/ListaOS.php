@@ -45,6 +45,7 @@
             <thead class="thead-dark">
               <tr>
                 <th scope="col">ID</th>
+                <th scope="col">Cliente </th>
                 <th scope="col">Marca</th>
                 <th scope="col">Modelo</th>
                 <th scope="col">Tipo</th>
@@ -52,14 +53,23 @@
             </thead>
             <tbody>
             <?php 
+            //includes
             include '../../Model/OSModel.php';
             require '../../BD/conexao.php';
-           
+           //criação do objeto de OS
             $lala= new OrdemServico();
+            //chamar a fução que lista Ordem de serviços
             $usuario = $lala->listartodos();
+            //conecta ao BD 
+            $banco = conexao::Conectar();
+            //PErcorre todas as linhas do objeto criado com o listar todos
             foreach($usuario as $e){
+                //seleciona no banco de dados o Cliente de cada ordem de serviço
+            $pessoa = $banco->query("SELECT nome FROM usuario where id= '$e->cliente'")->fetch();
+            //imprime ordem de serviço uma por uma
             echo '<tr>';
             echo '<th>'.($e->id).'</th>';
+            echo '<th>'.($pessoa['nome']).'</th>';
             echo '<th>'.($e->marca).'</th>';
             echo '<th>'.($e->modelo).'</th>';
             echo '<th>'.($e->tipo).'</th>';

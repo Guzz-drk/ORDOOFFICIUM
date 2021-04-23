@@ -1,44 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Usuário</title>
-</head>
-<body>
-    <div>
-        <form action="../../Controller/OSController.php" method="POST">
-            <Label>ID:</Label>
-                <input type="text" name="id" id="id">
-                <br><br>
-            <Label>Cliente:</Label>
-                <input type="text" name="txtCliente" id="txtCliente">
-                <br><br>
-            <Label>Marca do Equipamento:</Label>
-                <input type="text" name="txtMarcaequip" id="txtMarcaequip">
-                <br><br>
-            <Label>Modelo do Equipamento:</Label>
-                <input type="text" name="txtModeloequip" id="txtModeloequip">
-                <br><br>
-            <Label>Cor do Equipamento:</Label>
-                <input type="text" name="txtCorequip" id="txtCorequip">
-                <br><br>
-            <Label>Tipo de Equipamento:</Label>
-                <input type="text" name="txtTipoequip" id="txtTipoequip">
-                <br><br>
-            <Label>Vcio Percebido:</Label>
-                <input type="text" name="txtVicioperceb" id="txtVicioperceb">
-                <br><br>
-            <button type="submit">Enviar!</button> 
-            <button type="reset">Limpar!</button>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Criação de Ordem de Serviço</title>
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <div class="jumbotron jumbotron-fluid cab_1">
+                <div class="logo">
+                    <img src="img/logo.png" width="150px">
+                </div>
+                <div class="login_e_home">
+                    <a href="home.php"><img src="img/home_img.png" width="50px"><span class="descricao" id="hom">Home</span></a>
+                    <a href="Login.php"><img src="img/login_img.png" width="50px"><span class="descricao" id="log">Login</span></a>
+                </div>
+            </div>
+
+            <div class="cab_2">
+                <ul class="menu_opc">
+                    <li><a class="opc">Ordens de Serviço</a>
+                        <ul class="lista_OsUs">
+                            <li><a href="FormOs.php">Criar</a></li>
+                            <li><a href="ListaOS.php">Listar</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="opc">Usuários</a>
+                        <ul class="lista_OsUs" id="list_user">
+                            <li><a href="FormUsuario.php">Cadastrar</a></li>
+                            <li><a href="ListaUsuario.php">Listar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div>
+            <h2>Criar Ordem de serviço</h2>
+            <hr id="log_hr1"><hr id="log_hr2">
+        </div>
+
+        <form class="form_os" action="../../Controller/OSController.php" method="POST">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="">Cliente</label>
+                    <input type="text" class="form-control" name="txtCliente" id="txtCliente">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="">Marca</label>
+                    <input type="text" class="form-control" name="txtMarcaequip" id="txtMarcaequip">
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="">Modelo</label>
+                  <input type="text" class="form-control" name="txtModeloequip" id="txtModeloequip">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="">Cor</label>
+                    <input type="text" class="form-control" name="txtCorequip" id="txtCorequip">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="">Tipo</label>
+                    <input type="text" class="form-control" name="txtTipoequip" id="txtTipoequip">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-11">
+                    <label for="">Problema</label>
+                    <input type="text" class="form-control" name="txtVicioperceb" id="txtVicioperceb">
+                </div>
+            </div>
+            <hr id="log_hr3"><hr id="log_hr4">
+            <button type="submit" class="btn btn-outline-primary" id="criar">Criar</button>
+            <button type="reset" class="btn btn-outline-primary" id="limpar">Limpar</button>
         </form>
-    </div>
-        <br><br>
-    <div>
-        <form action="home.php">
-            <button type="submit">Cancelar!</button>
-        </form>
-    </div>
-</body>
+        <form action="home.php"><button type="submit" class="btn btn-outline-primary" id="cancelar">Cancelar</button></form>
+    </body>
 </html>

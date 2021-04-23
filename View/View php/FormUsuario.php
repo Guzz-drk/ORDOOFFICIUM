@@ -1,62 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Usuário</title>
-</head>
-<body>
-    <div>
-        <form action="../../Controller/UsuarioController.php" method="POST">
-            <Label>ID:</Label>
-                <input type="text" name="id" id="id">
-                <br><br>
-            <Label>Nome:</Label>
-                <input type="text" name="txtNome" id="txtNome">
-                <br><br>
-            <Label>CPF:</Label>
-                <input type="text" name="txtCpf" id="txtCpf">
-                <br><br>
-            <Label>RG:</Label>
-                <input type="text" name="txtRg" id="txtRg">
-                <br><br>
-            <Label>Telefone:</Label>
-                <input type="text" name="txtTelefone" id="txtTelefone">
-                <br><br>
-            <Label>Data de Nascimento:</Label>
-                <input type="date" name="txtDatanasc" id="txtDatanasc">
-                <br><br>
-            <Label>E-mail:</Label>
-                <input type="email" name="txtEmail" id="txtEmail">
-                <br><br>
-            <Label>Cidade:</Label>
-                <input type="text" name="txtCidade" id="txtCidade">
-                <br><br>
-            <Label>Rua:</Label>
-                <input type="text" name="txtRua" id="txtRua">
-                <br><br>
-            <Label>Bairro:</Label>
-                <input type="text" name="txtBairro" id="txtBairro">
-                <br><br>
-            <Label>Número:</Label>
-                <input type="text" name="txtNumero" id="txtNumero">
-                <br><br>
-            <Label>Senha:</Label>
-                <input type="password" name="txtSenha" id="txtSenha">
-                <br><br>
-            <Label>Controle de Acesso:</Label>
-                <input type="text" name="txtControleacesso" id="txtControleacesso">
-                <br><br>
-            <button type="submit">Enviar!</button> 
-            <button type="reset">Limpar!</button>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cadastro</title>
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <div class="jumbotron jumbotron-fluid cab_1">
+                <div class="logo">
+                    <img src="img/logo.png" width="150px">
+                </div>
+                <div class="login_e_home">
+                    <a href="home.php"><img src="img/home_img.png" width="50px"><span class="descricao" id="hom">Home</span></a>
+                    <a href="Login.php"><img src="img/login_img.png" width="50px"><span class="descricao" id="log">Login</span></a>
+                </div>
+            </div>
+
+            <div class="cab_2">
+                <ul class="menu_opc">
+                    <li><a class="opc">Ordens de Serviço</a>
+                        <ul class="lista_OsUs">
+                            <li><a href="FormOs.php">Criar</a></li>
+                            <li><a href="ListaOS.php">Listar</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="opc">Usuários</a>
+                        <ul class="lista_OsUs" id="list_user">
+                            <li><a href="FormUsuario.php">Cadastrar</a></li>
+                            <li><a href="ListaUsuario.php">Listar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div>
+            <h2>Cadastro de usuário</h2>
+            <hr id="log_hr1"><hr id="log_hr2">
+        </div>
+
+        <form class="form_os" action="../../Controller/UsuarioController.php" method="POST">
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label for="">Nome</label>
+                    <input type="text" class="form-control" name="txtNome" id="txtNome" placeholder="Ex: Tristan Monteiro" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="">CPF</label>
+                    <input type="text" class="form-control" name="txtCpf" id="txtCpf" placeholder="xxx.xxx.xxx-xx" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="">RG</label>
+                    <input type="text" class="form-control" name="txtRg" id="txtRg" placeholder="xxxxxxxxxx" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="">Data de nascimento</label>
+                    <input type="date" class="form-control" name="txtDatanasc" id="txtDatanasc" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="">Telefone</label>
+                    <input type="text" class="form-control" name="txtTelefone" id="txtTelefone" placeholder="(xx) x xxxx-xxxx" required>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="">Cidade</label>
+                  <input type="text" class="form-control" name="txtCidade" id="txtCidade" required>
+              </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-7">
+                    <label for="">Email</label>
+                    <input type="email" class="form-control" name="txtEmail" id="txtEmail" placeholder="Ex@emplo.com" required>
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="">Senha</label>
+                    <input type="password" class="form-control" name="txtSenha" id="txtSenha" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-7">
+                    <label for="">Controle de Acesso</label>
+                    <input type="txt" class="form-control" name="txtControleacesso" id="txtControleacesso" required>
+                </div>
+            </div>
+            <hr id="log_hr3"><hr id="log_hr4">
+            <button type="submit" class="btn btn-outline-primary" id="cadastrar">Cadastrar</button>
+            <button type="reset" class="btn btn-outline-primary" id="limpar">Limpar</button>
         </form>
-    </div>
-        <br><br>
-    <div>
-        <form action="home.php">
-            <button type="submit">Cancelar!</button>
-        </form>
-    </div>
-</body>
+        <form action="home.php"><button type="submit" class="btn btn-outline-primary" id="cancelar">Cancelar</button></form>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/jquery.mask.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#txtCpf").mask("000.000.000-00")
+                $("#txtTelefone").mask("(00) 0 0000-0000")
+            })
+        </script>
+    </body>
 </html>

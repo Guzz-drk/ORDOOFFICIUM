@@ -44,27 +44,26 @@
         <table class="table">
             <thead class="thead-dark">
               <tr>
-                <th scope="col">Cliente</th>
+                <th scope="col">ID</th>
                 <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
                 <th scope="col">Tipo</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">Wesley Dutra</th>
-                <td>Intel</td>
-                <td>Computador</td>
-              </tr>
-              <tr>
-                <th scope="row">Gustavo Pandolpho</th>
-                <td>Apple</td>
-                <td>Computador</td>
-              </tr>
-              <tr>
-                <th scope="row">Cleito Beal</th>
-                <td>Samsung</td>
-                <td>Celular</td>
-              </tr>
+            <?php 
+            include '../../Model/OSModel.php';
+            require '../../BD/conexao.php';
+           
+            $lala= new OrdemServico();
+            $usuario = $lala->listartodos();
+            foreach($usuario as $e){
+            echo '<tr>';
+            echo '<th>'.($e->id).'</th>';
+            echo '<th>'.($e->marca).'</th>';
+            echo '<th>'.($e->modelo).'</th>';
+            echo '<th>'.($e->tipo).'</th>';
+            echo '</tr>';}?>
             </tbody>
           </table>
     </body>

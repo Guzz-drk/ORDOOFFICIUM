@@ -99,7 +99,11 @@
             <div class="form-row">
                 <div class="form-group col-md-7">
                     <label for="">Controle de Acesso</label>
-                    <input type="txt" class="form-control" name="txtControleacesso" id="txtControleacesso" required>
+                    <select name="txtControleacesso" id="txtControleacesso" class="form-control">
+                        <option selected></option>
+                        <option value="true">Administrador</option>
+                        <option value="false">Usuário</option>
+                    </select>
                 </div>
             </div>
             <hr id="log_hr3"><hr id="log_hr4">

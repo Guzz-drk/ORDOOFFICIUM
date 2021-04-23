@@ -15,7 +15,7 @@
                     <img src="img/logo.png" width="150px">
                 </div>
                 <div class="login_e_home">
-                    <a href="home.html"><img src="img/home_img.png" width="50px"><span class="descricao" id="hom">Home</span></a>
+                    <a href="home.php"><img src="img/home_img.png" width="50px"><span class="descricao" id="hom">Home</span></a>
                 </div>
             </div>
         </header>
